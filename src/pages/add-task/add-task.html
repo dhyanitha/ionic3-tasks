@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form [formGroup]="taskItem" (ngSubmit)="addTask()">
+      <ion-item>
+        <ion-label>Task</ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Deadline</ion-label>
+        <ion-input formControlName="deadline"></ion-input>
+      </ion-item>
+      <button ion-button type="submit">Submit</button>
+    </form>
+</ion-content>

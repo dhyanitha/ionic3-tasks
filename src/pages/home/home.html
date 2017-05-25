@@ -4,19 +4,26 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addTask()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+
+
+  <ion-card *ngFor="let task of tasks | async">
 
   <ion-item>
-    <h2>Marty McFly</h2>
-    <p>November 5, 1955</p>
+    <h2>{{ task.title }}</h2>
+    <p><ion-icon name="timer"></ion-icon>&nbsp;{{ task.deadline | formatdate }}</p>
   </ion-item>
-  
+
   <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    <p>{{ task.description }}</p>
   </ion-card-content>
 
   <ion-row>
