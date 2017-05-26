@@ -17,29 +17,36 @@
 
   <ion-card *ngFor="let task of tasks | async">
 
-  <ion-item>
+  <ion-card-header>
     <h2>{{ task.title }}</h2>
-    <p><ion-icon name="time"></ion-icon>&nbsp;{{ task.deadline | formatdate }}</p>
-  </ion-item>
+  </ion-card-header>
 
-  <ion-card-content>
-    <p>{{ task.description }}</p>
-  </ion-card-content>
+  <ion-list>
 
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="pricetags"></ion-icon>
-        <div class="task-tag" *ngFor='let tag of task.tags'>{{ tag | lowercase }}</div>
-      </button>
-    </ion-col>
+    <ion-item>      
+      <p><ion-icon name="time"></ion-icon>&nbsp;{{ task.deadline | formatdate }}</p>
+    </ion-item>
 
-    <ion-col>
-      <!-- <ion-note>
-        11h ago
-      </ion-note> -->
-    </ion-col>
-  </ion-row>
+    <ion-card-content>
+      <p>{{ task.description }}</p>
+    </ion-card-content>
 
-</ion-card>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="pricetags"></ion-icon>
+          <div class="task-tag" *ngFor='let tag of task.tags'>{{ tag | lowercase }}</div>
+        </button>
+      </ion-col>
+
+      <ion-col>
+        <!-- <ion-note>
+          11h ago
+        </ion-note> -->
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  
+  </ion-card>
+
 </ion-content>

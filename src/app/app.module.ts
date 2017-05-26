@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AddTaskPage } from '../pages/add-task/add-task';
 import { SubjectPage } from '../pages/subject/subject';
+import { FlashCardsPage } from '../pages/flash-cards/flash-cards';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,6 +15,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormatdatePipe } from '../pipes/formatdate/formatdate';
+import { FlashCardComponent } from '../components/flash-card/flash-card';
+import { Data } from '../providers/data/data';
+import { HttpModule } from '@angular/http';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -33,9 +37,11 @@ export const firebaseConfig = {
     AddTaskPage,
     SubjectPage,
     FormatdatePipe,
+    FlashCardsPage,
+    FlashCardComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
@@ -46,12 +52,14 @@ export const firebaseConfig = {
     HomePage,
     ListPage,
     SubjectPage,
-    AddTaskPage
+    AddTaskPage,
+    FlashCardsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Data,
   ]
 })
 export class AppModule {}
