@@ -115,16 +115,29 @@
             ]
         },
         {
-            "flashCardFront":"Let R be a binary relation defined on A having n elements. What are the minimum and maximum no of elements in the identity relation? ",
-            "flashCardBack": "n, n. n is the number of diagonal elements. In identity relation, the diagonal elements are present and rest are absent.",
+            "flashCardFront":"Let A be a set of elements. The number of ordered pairs in the largest and the smallest identity relation on A are ",
+            "flashCardBack": "n and n. n is the number of diagonal elements. In identity relation, the diagonal elements are present and rest are absent.",
             "flashCardFlipped": false,
             "questionText": "Identity = { (x,x) | x∈R }",
             "topic":"Relations",
             "answers": [
-                {"answer": "n, n", "correct": true, "selected": false},
-                {"answer": "n, n^2", "correct": false, "selected": false},
-                {"answer": "0, n", "correct": false, "selected": false},
-                {"answer": "0, n^2", "correct": false, "selected": false}
+                {"answer": "n and n", "correct": true, "selected": false},
+                {"answer": "n and n^2", "correct": false, "selected": false},
+                {"answer": "0 and n", "correct": false, "selected": false},
+                {"answer": "0 and n^2", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let R be a binary relation defined on A having n elements. What is the maximum number of identity relations on A? ",
+            "flashCardBack": "1. Only 1 identity matrix is possible.",
+            "flashCardFlipped": false,
+            "questionText": "Identity = { (x,x) | x∈R }",
+            "topic":"Relations",
+            "answers": [
+                {"answer": "n", "correct": false, "selected": false},
+                {"answer": "1", "correct": true, "selected": false},
+                {"answer": "0", "correct": false, "selected": false},
+                {"answer": "n^2", "correct": false, "selected": false}
             ]
         }
  
