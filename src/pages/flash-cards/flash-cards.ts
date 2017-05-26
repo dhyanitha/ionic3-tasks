@@ -35,10 +35,12 @@ export class FlashCardsPage {
         // console.log(subject);
  
         this.dataService.load(subject).then((data) => {
+
+            data = this.randomizeSequence(data);
  
             data.map((question) => {
                 let originalOrder = question.answers;
-                question.answers = this.randomizeAnswers(originalOrder);
+                question.answers = this.randomizeSequence(originalOrder);
                 return question;
             });     
  
@@ -83,16 +85,16 @@ export class FlashCardsPage {
         }, 3000);
     }
  
-    randomizeAnswers(rawAnswers: any[]): any[] {
+    randomizeSequence(sequence: any[]): any[] {
  
-        for (let i = rawAnswers.length - 1; i > 0; i--) {
+        for (let i = sequence.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
-            let temp = rawAnswers[i];
-            rawAnswers[i] = rawAnswers[j];
-            rawAnswers[j] = temp;
+            let temp = sequence[i];
+            sequence[i] = sequence[j];
+            sequence[j] = temp;
         }
  
-        return rawAnswers;
+        return sequence;
  
     }
  

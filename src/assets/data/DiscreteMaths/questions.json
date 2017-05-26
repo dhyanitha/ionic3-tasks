@@ -2,10 +2,11 @@
     "questions": [
  
         {
-            "flashCardFront": "Let X and Y be two sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when union operation is applied?",
+            "flashCardFront": "Let X and Y be the sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when union operation is applied?",
             "flashCardBack": "max(m, n) <= |X U Y| <= m + n",
             "flashCardFlipped": false,
             "questionText": "Hint: |A| is the cardinality of a set",
+            "topic":"Set Theory",
             "answers": [
                 {"answer": "max(m, n) <= |X U Y| <= m + n", "correct": true, "selected": false},
                 {"answer": "m <= |X U Y| <= m + n", "correct": false, "selected": false},
@@ -13,10 +14,11 @@
             ]
         },
         {
-            "flashCardFront": "Let X and Y be two sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when intersection operation is applied?",
+            "flashCardFront": "Let X and Y be the sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when intersection operation is applied?",
             "flashCardBack": "0 <= |X U Y| <= min(m , n)",
             "flashCardFlipped": false,
             "questionText": "Hint: A n B can also be Φ",
+            "topic":"Set Theory",
             "answers": [
                 {"answer": "m <= |X U Y| <= min(m , n)", "correct": false, "selected": false},
                 {"answer": "0 <= |X U Y| <= min(m , n)", "correct": true, "selected": false},
@@ -24,10 +26,11 @@
             ]
         },
         {
-            "flashCardFront": "Let X and Y be two sets. The difference between them ( X-Y )can be expressed as",
+            "flashCardFront": "Let X and Y be the sets. The difference between them ( X-Y )can be expressed as",
             "flashCardBack": "X n Y'",
             "flashCardFlipped": false,
             "questionText": "",
+            "topic":"Set Theory",
             "answers": [
                 {"answer": "X n Y", "correct": false, "selected": false},
                 {"answer": "X U Y'", "correct": false, "selected": false},
@@ -39,6 +42,7 @@
             "flashCardBack": "2^n",
             "flashCardFlipped": false,
             "questionText": "P(X) is the powerset of X",
+            "topic":"Set Theory",
             "answers": [
                 {"answer": "2^n", "correct": true, "selected": false},
                 {"answer": "n", "correct": false, "selected": false},
@@ -50,11 +54,77 @@
             "flashCardBack": "Transitive and symmetric",
             "flashCardFlipped": false,
             "questionText": "",
+            "topic":"Relations",
             "answers": [
                 {"answer": "Neither reflexive nor symmetric", "correct": false, "selected": false},
                 {"answer": "Symmetric and reflexive", "correct": false, "selected": false},
                 {"answer": "Transitive and reflexive", "correct": false, "selected": false},
                 {"answer": "Transitive and symmetric", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let X, Y, Z be the sets of sizes x, y and z respectively. Let W = X x Y. Let E be the set of all subSet Theory of W. The number of functions from Z to E is:",
+            "flashCardBack": "2^xyz",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Functions",
+            "answers": [
+                {"answer": "z^2xy", "correct": false, "selected": false},
+                {"answer": "2^xyz", "correct": true, "selected": false},
+                {"answer": "z x 2^xy", "correct": false, "selected": false},
+                {"answer": "z^(2^(x + y))", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let X and Y be the sets of sizes m, n respectively. Let X x Y be the cartesian product. Number of elements in |X x Y| is: ",
+            "flashCardBack": "m x n. Since every element of X is paired with every other element of Y.",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Set Theory",
+            "answers": [
+                {"answer": "2^m", "correct": false, "selected": false},
+                {"answer": "2^n", "correct": false, "selected": false},
+                {"answer": "m x n", "correct": true, "selected": false},
+                {"answer": "n^m", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let |A| = n. What is the cardinality of | P(AxA) | ?",
+            "flashCardBack": "2^(n^2)). Since |P(X)| = No of subsets of X = 2^n",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Set Theory",
+            "answers": [
+                {"answer": "2^(2^n))", "correct": false, "selected": false},
+                {"answer": "2^n", "correct": false, "selected": false},
+                {"answer": "n^2", "correct": false, "selected": false},
+                {"answer": "2^(n^2))", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let X and Y be the sets of sizes m, n respectively. What is the number of relations from A to B: ",
+            "flashCardBack": "2^mn. Since |A x B| = mn. R ⊆ AxB. Therefore, R = 2^mn",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Relations",
+            "answers": [
+                {"answer": "2^m", "correct": false, "selected": false},
+                {"answer": "2^n", "correct": false, "selected": false},
+                {"answer": "m x n", "correct": false, "selected": false},
+                {"answer": "2^mn", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Let R be a binary relation defined on A having n elements. What are the minimum and maximum no of elements in the identity relation? ",
+            "flashCardBack": "n, n. n is the number of diagonal elements. In identity relation, the diagonal elements are present and rest are absent.",
+            "flashCardFlipped": false,
+            "questionText": "Identity = { (x,x) | x∈R }",
+            "topic":"Relations",
+            "answers": [
+                {"answer": "n, n", "correct": true, "selected": false},
+                {"answer": "n, n^2", "correct": false, "selected": false},
+                {"answer": "0, n", "correct": false, "selected": false},
+                {"answer": "0, n^2", "correct": false, "selected": false}
             ]
         }
  
