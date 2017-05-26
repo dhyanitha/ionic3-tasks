@@ -141,16 +141,16 @@
             ]
         },
         {
-            "flashCardFront":"Let R be a binary relation defined on A having n elements. What is the maximum number of identity relations on A? ",
-            "flashCardBack": "1. Only 1 identity matrix is possible.",
+            "flashCardFront":"Let A be a set of elements. The number of ordered pairs in the smallest and the largest reflexive relation on A are ",
+            "flashCardBack": "n and n^2. Smallest: Identity and Largest: All elements",
             "flashCardFlipped": false,
-            "questionText": "Identity = { (x,x) | x∈R }",
+            "questionText": "Reflexive = { (x,x) | x∈R }",
             "topic":"Relations",
             "answers": [
-                {"answer": "n", "correct": false, "selected": false},
-                {"answer": "1", "correct": true, "selected": false},
-                {"answer": "0", "correct": false, "selected": false},
-                {"answer": "n^2", "correct": false, "selected": false}
+                {"answer": "n and n", "correct": false, "selected": false},
+                {"answer": "0 and n^2", "correct": false, "selected": false},
+                {"answer": "n and n^2", "correct": true, "selected": false},
+                {"answer": "n^2 and n^2", "correct": false, "selected": false}
             ]
         }
  
