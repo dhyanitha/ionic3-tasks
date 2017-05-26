@@ -139,6 +139,19 @@
                 {"answer": "0", "correct": false, "selected": false},
                 {"answer": "n^2", "correct": false, "selected": false}
             ]
+        },
+        {
+            "flashCardFront":"Let R be a binary relation defined on A having n elements. What is the maximum number of identity relations on A? ",
+            "flashCardBack": "1. Only 1 identity matrix is possible.",
+            "flashCardFlipped": false,
+            "questionText": "Identity = { (x,x) | x∈R }",
+            "topic":"Relations",
+            "answers": [
+                {"answer": "n", "correct": false, "selected": false},
+                {"answer": "1", "correct": true, "selected": false},
+                {"answer": "0", "correct": false, "selected": false},
+                {"answer": "n^2", "correct": false, "selected": false}
+            ]
         }
  
     ]
