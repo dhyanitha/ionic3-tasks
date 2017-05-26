@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @IonicPage()
@@ -11,6 +11,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class AddTaskPage {
 
 	private taskItem : FormGroup;
+	tags: any;
 	
 	tasks: FirebaseListObservable<any>;
 
@@ -35,7 +36,8 @@ export class AddTaskPage {
 		const item = {
 			created: new Date().toString(), id: new Date().getTime().toString(), 
 			title: this.taskItem.value.title, description: this.taskItem.value.description,
-			deadline: new Date(this.taskItem.value.deadline).toString()
+			deadline: new Date(this.taskItem.value.deadline).toString(),
+			tags: this.tags
 		};
 		console.log(JSON.stringify(item));
 		this.tasks.push(item);

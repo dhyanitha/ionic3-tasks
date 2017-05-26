@@ -8,6 +8,17 @@
 
 
 <ion-content padding>
+  <ion-item>
+      <ion-label>Tags</ion-label>
+      <ion-select [(ngModel)]="tags" multiple="true">
+        <ion-option>priority</ion-option>
+        <ion-option>revise</ion-option>
+        <ion-option>on hold</ion-option>
+        <ion-option>need help</ion-option>
+        <ion-option>questions</ion-option>
+        <ion-option>theory</ion-option>
+      </ion-select>
+    </ion-item>
 	<form [formGroup]="taskItem" (ngSubmit)="addTask()">
       <ion-item>
         <ion-label>Task</ion-label>

@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AddTaskPage } from '../pages/add-task/add-task';
+import { SubjectPage } from '../pages/subject/subject';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     HomePage,
     ListPage,
     AddTaskPage,
-    FormatdatePipe
+    SubjectPage,
+    FormatdatePipe,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     ListPage,
+    SubjectPage,
     AddTaskPage
   ],
   providers: [
