@@ -36,6 +36,7 @@ export class QuizPage {
     }
 
     loadFlashCards(course){
+    	console.log(course);
     	this.navCtrl.push(FlashCardsPage,{ course: course });
     }
 

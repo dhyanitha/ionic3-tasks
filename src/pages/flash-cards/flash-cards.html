@@ -1,12 +1,15 @@
 <ion-header>
-  <ion-title>Quiz</ion-title>
-</ion-header>
 
+  <ion-navbar>
+    <ion-title>{{ subject }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
 
 <ion-content padding>
 
 	<ion-slides #slides>
- 
+
         <ion-slide class="start-slide">
             <button ion-button color="primary" (click)="nextSlide()">Start!</button>
         </ion-slide>

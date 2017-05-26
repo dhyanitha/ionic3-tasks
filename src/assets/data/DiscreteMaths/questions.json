@@ -1,0 +1,62 @@
+{
+    "questions": [
+ 
+        {
+            "flashCardFront": "Let X and Y be two sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when union operation is applied?",
+            "flashCardBack": "max(m, n) <= |X U Y| <= m + n",
+            "flashCardFlipped": false,
+            "questionText": "Hint: |A| is the cardinality of a set",
+            "answers": [
+                {"answer": "max(m, n) <= |X U Y| <= m + n", "correct": true, "selected": false},
+                {"answer": "m <= |X U Y| <= m + n", "correct": false, "selected": false},
+                {"answer": "n <= |X U Y| <= m + n", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Let X and Y be two sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when intersection operation is applied?",
+            "flashCardBack": "0 <= |X U Y| <= min(m , n)",
+            "flashCardFlipped": false,
+            "questionText": "Hint: A n B can also be Φ",
+            "answers": [
+                {"answer": "m <= |X U Y| <= min(m , n)", "correct": false, "selected": false},
+                {"answer": "0 <= |X U Y| <= min(m , n)", "correct": true, "selected": false},
+                {"answer": "n <= |X U Y| <= min(m , n)", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Let X and Y be two sets. The difference between them ( X-Y )can be expressed as",
+            "flashCardBack": "X n Y'",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "answers": [
+                {"answer": "X n Y", "correct": false, "selected": false},
+                {"answer": "X U Y'", "correct": false, "selected": false},
+                {"answer": "X n Y'", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Let X be a set having |X|=n. What is the cardinality of the P(X)?",
+            "flashCardBack": "2^n",
+            "flashCardFlipped": false,
+            "questionText": "P(X) is the powerset of X",
+            "answers": [
+                {"answer": "2^n", "correct": true, "selected": false},
+                {"answer": "n", "correct": false, "selected": false},
+                {"answer": "2^n-1", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "The binary relation S = ф (empty set) on set A = {1, 2, 3} is :",
+            "flashCardBack": "Transitive and symmetric",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "answers": [
+                {"answer": "Neither reflexive nor symmetric", "correct": false, "selected": false},
+                {"answer": "Symmetric and reflexive", "correct": false, "selected": false},
+                {"answer": "Transitive and reflexive", "correct": false, "selected": false},
+                {"answer": "Transitive and symmetric", "correct": true, "selected": false}
+            ]
+        }
+ 
+    ]
+}

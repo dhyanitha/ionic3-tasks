@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+const url = 'assets/data';
+
 @Injectable()
 export class Data {
 
@@ -11,7 +13,7 @@ export class Data {
  
     }
  
-    load(){
+    load(subject){
  
         if(this.data){
             return Promise.resolve(this.data);
@@ -19,7 +21,7 @@ export class Data {
  
         return new Promise(resolve => {
  
-            this.http.get('assets/data/questions.json').map(res => res.json()).subscribe(data => {
+            this.http.get(url+'/'+subject+'/questions.json').map(res => res.json()).subscribe(data => {
                 this.data = data.questions;
                 resolve(this.data);
             });

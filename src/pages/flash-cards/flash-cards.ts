@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Data } from '../../providers/data/data';
 
 @IonicPage()
@@ -20,29 +20,39 @@ export class FlashCardsPage {
  
     constructor(public navCtrl: NavController,
                 public dataService: Data,
-                public params: NavParams) {
+                public params: NavParams,
+                public toastCtrl: ToastController) {
+
         this.subject = this.params.get('course');
+        // console.log(this.subject);
  
     }
  
     ionViewDidLoad() {
  
         this.slides.lockSwipes(true);
+        const subject = this._formatSubject(this.subject);
+        // console.log(subject);
  
-        this.dataService.load().then((data) => {
+        this.dataService.load(subject).then((data) => {
  
             data.map((question) => {
- 
                 let originalOrder = question.answers;
                 question.answers = this.randomizeAnswers(originalOrder);
                 return question;
- 
             });     
  
             this.questions = data;
  
         });
  
+    }
+
+    _formatSubject(subject){
+        while(subject.indexOf(" ") != -1){
+            subject = subject.replace(" ","");
+        }
+        return subject;
     }
  
     nextSlide(){
@@ -59,6 +69,10 @@ export class FlashCardsPage {
  
         if(answer.correct){
             this.score++;
+            this.presentToast('Correct! '+"\uD83D\uDE00");
+        }
+        else{
+            this.presentToast('Wrong! '+"\uD83D\uDE14");
         }
  
         setTimeout(() => {
@@ -85,6 +99,20 @@ export class FlashCardsPage {
     restartQuiz(){
         this.score = 0;
         this.slides.slideTo(1, 1000);
+    }
+
+    presentToast(msg) {
+        let toast = this.toastCtrl.create({
+            message: msg,
+            duration: 3000,
+            position: 'top'
+        });
+
+        toast.onDidDismiss(() => {
+            // console.log('Dismissed toast');
+        });
+
+        toast.present();
     }
 
 }
