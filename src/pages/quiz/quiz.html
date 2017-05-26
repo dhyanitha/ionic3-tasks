@@ -1,0 +1,15 @@
+<ion-header>
+	<ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Quiz</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+	    <button ion-item *ngFor="let course of courses; let i = index;" (click)="loadFlashCards(course)">{{i+1}}. {{course}}</button>
+  	</ion-list>
+</ion-content>

@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { QuizPage } from '../pages/quiz/quiz';
 import { AddTaskPage } from '../pages/add-task/add-task';
 import { SubjectPage } from '../pages/subject/subject';
 import { FlashCardsPage } from '../pages/flash-cards/flash-cards';
@@ -34,6 +35,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     ListPage,
+    QuizPage,
     AddTaskPage,
     SubjectPage,
     FormatdatePipe,
@@ -51,6 +53,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     ListPage,
+    QuizPage,
     SubjectPage,
     AddTaskPage,
     FlashCardsPage
