@@ -1,11 +1,12 @@
 page-home {
 	.task-tag{
 	    border: 1px solid #32db64;
-	    border-radius: 9px;
+	    border-radius: 15px;
 	    color: #222 !important;
-	    font-size: 0.9em;
-	    padding: 4px;
+	    font-size: 13px;
+	    padding: 3px;
 	    text-transform: lowercase;
+	    display: inline-block;
 	}
 
 	.task-deadline {
