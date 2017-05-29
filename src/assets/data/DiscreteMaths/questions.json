@@ -63,7 +63,7 @@
             ]
         },
         {
-            "flashCardFront":"Let X, Y, Z be the sets of sizes x, y and z respectively. Let W = X x Y. Let E be the set of all subSet Theory of W. The number of functions from Z to E is:",
+            "flashCardFront":"Let X, Y, Z be the sets of sizes x, y and z respectively. Let W = X x Y. Let E be the set of all subsets of W. The number of functions from Z to E is:",
             "flashCardBack": "2^xyz",
             "flashCardFlipped": false,
             "questionText": "",
@@ -142,7 +142,7 @@
         },
         {
             "flashCardFront":"Let A be a set of elements. The number of ordered pairs in the smallest and the largest reflexive relation on A are ",
-            "flashCardBack": "n and n^2. Smallest: Identity and Largest: All elements",
+            "flashCardBack": "n and n^2. Smallest relation: Identity and Largest relation: All elements",
             "flashCardFlipped": false,
             "questionText": "Reflexive = { (x,x) | x∈R }",
             "topic":"Relations",
@@ -152,7 +152,73 @@
                 {"answer": "n and n^2", "correct": true, "selected": false},
                 {"answer": "n^2 and n^2", "correct": false, "selected": false}
             ]
+        },
+        {
+            "flashCardFront":"p implies q (p -> q) is equivalent to : ",
+            "flashCardBack": "-p V q.  q unless -p",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Relations",
+            "answers": [
+                {"answer": "p ^ q", "correct": false, "selected": false},
+                {"answer": "-p ^ q", "correct": false, "selected": false},
+                {"answer": "p V q", "correct": false, "selected": false},
+                {"answer": "-p V q", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Which of the following operations does not satisfy associativity? ",
+            "flashCardBack": "Implication (->) does not satisfy associativity and commutativity. ",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Math logic",
+            "answers": [
+                {"answer": "Implication", "correct": true, "selected": false},
+                {"answer": "Conjunction", "correct": false, "selected": false},
+                {"answer": "Disjunction", "correct": false, "selected": false},
+                {"answer": "Bi-implication", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"What is the converse, contrapositive and inverse of p -> q ?",
+            "flashCardBack": "Converse is q -> p. Contrapositive is -q -> -p. Inverse -p -> -q. Eg: The home team wins whenever it is raining. \n1.Converse: If the home team wins, then it is raining.\n2.Contrapositive: If the home team does not win then it is not raining.\n3.Inverse: If it is not raining, then the home team does not win",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Math logic",
+            "answers": [
+                {"answer": "-q -> -p and q -> p and -p -> -q", "correct": false, "selected": false},
+                {"answer": "q -> p and -q -> -p and -p -> -q", "correct": true, "selected": false},
+                {"answer": "q -> p and p -> q and -p -> -q", "correct": false, "selected": false},
+                {"answer": "-p -> -q and -q -> -p and q -> p", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Consider the following expressions: (i) false (ii) Q (iii) true (iv) P ∨ Q (v) ¬Q ∨ P The number of expressions given above that are logically implied by P ∧ (P ⇒ Q) is :",
+            "flashCardBack": "An important inference rule called modus ponens says this [ P ∧ (P ⇒ Q) ] ⇒ Q is a tautology",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Math logic",
+            "answers": [
+                {"answer": "4", "correct": true, "selected": false},
+                {"answer": "2", "correct": false, "selected": false},
+                {"answer": "3", "correct": false, "selected": false},
+                {"answer": "5", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront":"Which one of the following in NOT necessarily a property of a Group?",
+            "flashCardBack": "Closure + Associativity + Identity + Inverse",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Math logic",
+            "answers": [
+                {"answer": "Associativity", "correct": false, "selected": false},
+                {"answer": "Commutativity", "correct": true, "selected": false},
+                {"answer": "Existence of inverse for every element", "correct": false, "selected": false},
+                {"answer": "Existence of identity", "correct": false, "selected": false}
+            ]
         }
+
  
     ]
 }

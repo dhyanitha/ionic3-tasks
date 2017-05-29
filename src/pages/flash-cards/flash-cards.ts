@@ -13,7 +13,7 @@ export class FlashCardsPage {
  
     hasAnswered: boolean = false;
     score: number = 0;
- 
+    total: number = 0;
     slideOptions: any;
     questions: any;
     subject: any;
@@ -35,6 +35,8 @@ export class FlashCardsPage {
         // console.log(subject);
  
         this.dataService.load(subject).then((data) => {
+
+            this.total = data.length;
 
             data = this.randomizeSequence(data);
  
