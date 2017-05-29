@@ -1,7 +1,7 @@
 # Task-planner 
 This is a simple task-planner for GATE preparation. The app contains a dashboard where tasks can be pinned. The app also contains flash cards of various subjects containing questions which are difficult to remember.
 
-![alt text](screen.png)
+![App](screen.gif)
 
 ### Installation
 * Git clone the directory `git clone https://github.com/minibhati93/my-task-planner.git`
