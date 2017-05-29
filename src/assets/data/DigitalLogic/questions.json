@@ -1,0 +1,83 @@
+{
+    "questions": [
+ 
+        {
+            "flashCardFront": "Transformation theorem?",
+            "flashCardBack": "(A+B)(A+C): A+BC",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "(A+B)(A+C): A+BC", "correct": true, "selected": false},
+                {"answer": "(A+B)(A+C): A+C", "correct": false, "selected": false},
+                {"answer": "(A+B)(A+C): B+C", "correct": false, "selected": false},
+                {"answer": "(A+B)(A+C): AC+BC", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Distribution theorem?",
+            "flashCardBack": "A+BC: (A+B)(A+C)",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "A+BC: (A+B)C", "correct": false, "selected": false},
+                {"answer": "A+BC: (A+B)(A+C)", "correct": true, "selected": false},
+                {"answer": "A+BC: A(B+C)", "correct": false, "selected": false},
+                {"answer": "A+BC: AC+BC", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Maximum possible minterms or maxterms for n variables?",
+            "flashCardBack": "2^n",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "n^2", "correct": false, "selected": false},
+                {"answer": "n^n", "correct": false, "selected": false},
+                {"answer": "2^n", "correct": true, "selected": false},
+                {"answer": "n", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Maximum possible logical expressions for n variables?",
+            "flashCardBack": "2^(2^n)",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "n^2", "correct": false, "selected": false},
+                {"answer": "n^n", "correct": false, "selected": false},
+                {"answer": "n^(2^n)", "correct": false, "selected": false},
+                {"answer": "2^(2^n)", "correct": true, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Maximum possible self-dual possible for n variables?",
+            "flashCardBack": "2^(2^(n-1))",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "2^(2^(n-1))", "correct": true, "selected": false},
+                {"answer": "n^n", "correct": false, "selected": false},
+                {"answer": "n^(2^n)", "correct": false, "selected": false},
+                {"answer": "2^(n-1)", "correct": false, "selected": false}
+            ]
+        },
+        {
+            "flashCardFront": "Maximum number of prime implicants for n-variable Boolean function?",
+            "flashCardBack": "2^(n-1)",
+            "flashCardFlipped": false,
+            "questionText": "",
+            "topic":"Boolean Algebra",
+            "answers": [
+                {"answer": "2^(2^(n-1))", "correct": false, "selected": false},
+                {"answer": "2^(n-1)", "correct": true, "selected": false},
+                {"answer": "2^n)", "correct": false, "selected": false},
+                {"answer": "2^(n-1)", "correct": false, "selected": false}
+            ]
+        }
+    ]
+}

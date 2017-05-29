@@ -16,7 +16,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormatdatePipe } from '../pipes/formatdate/formatdate';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
-import { Data } from '../providers/data/data';
+
 import { HttpModule } from '@angular/http';
 
 // AF2 Settings
@@ -61,7 +61,6 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Data,
   ]
 })
 export class AppModule {}

@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { Data } from '../../providers/data/data';
+import { IonicPage, NavController, NavParams, ToastController, Slides } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+const url = 'assets/data';
 
 @IonicPage()
 @Component({
@@ -9,7 +12,7 @@ import { Data } from '../../providers/data/data';
 })
 export class FlashCardsPage {
 
-	@ViewChild('slides') slides: any;
+	@ViewChild(Slides) slides: Slides;
  
     hasAnswered: boolean = false;
     score: number = 0;
@@ -19,25 +22,22 @@ export class FlashCardsPage {
     subject: any;
  
     constructor(public navCtrl: NavController,
-                public dataService: Data,
                 public params: NavParams,
-                public toastCtrl: ToastController) {
+                public toastCtrl: ToastController,
+                public http: Http) {
 
         this.subject = this.params.get('course');
-        // console.log(this.subject);
  
     }
  
-    ionViewDidLoad() {
- 
+    ionViewWillEnter() {
+
         this.slides.lockSwipes(true);
         const subject = this._formatSubject(this.subject);
-        // console.log(subject);
- 
-        this.dataService.load(subject).then((data) => {
-
+        
+        this.http.get(url+'/'+subject+'/questions.json').map(res => res.json()).subscribe(data => {
+            data = data.questions;
             this.total = data.length;
-
             data = this.randomizeSequence(data);
  
             data.map((question) => {
@@ -102,7 +102,7 @@ export class FlashCardsPage {
  
     restartQuiz(){
         this.score = 0;
-        this.slides.slideTo(1, 1000);
+        this.slides.slideTo(1, 500);
     }
 
     presentToast(msg) {

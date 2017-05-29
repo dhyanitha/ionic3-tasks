@@ -15,14 +15,14 @@
         },
         {
             "flashCardFront": "Let X and Y be the sets having |X| = m and |Y|=n. What are the minimum and maximum number of elements when intersection operation is applied?",
-            "flashCardBack": "0 <= |X U Y| <= min(m , n)",
+            "flashCardBack": "0 <= |X n Y| <= min(m , n)",
             "flashCardFlipped": false,
             "questionText": "Hint: A n B can also be Φ",
             "topic":"Set Theory",
             "answers": [
-                {"answer": "m <= |X U Y| <= min(m , n)", "correct": false, "selected": false},
-                {"answer": "0 <= |X U Y| <= min(m , n)", "correct": true, "selected": false},
-                {"answer": "n <= |X U Y| <= min(m , n)", "correct": false, "selected": false}
+                {"answer": "m <= |X n Y| <= min(m , n)", "correct": false, "selected": false},
+                {"answer": "0 <= |X n Y| <= min(m , n)", "correct": true, "selected": false},
+                {"answer": "n <= |X n Y| <= min(m , n)", "correct": false, "selected": false}
             ]
         },
         {
