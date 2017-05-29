@@ -6,7 +6,11 @@ page-home {
 	    font-size: 13px;
 	    padding: 3px;
 	    text-transform: lowercase;
-	    display: inline-block;
+	    display: inline-block;   
+	}
+
+	.task-tag:hover{
+		pointer: cursor;
 	}
 
 	.task-deadline {

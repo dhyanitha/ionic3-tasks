@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage, PopoverPage } from '../pages/home/home';
+import { EditModalPage } from '../pages//edit-modal/edit-modal';
 import { QuizPage } from '../pages/quiz/quiz';
 import { AddTaskPage } from '../pages/add-task/add-task';
 import { FlashCardsPage } from '../pages/flash-cards/flash-cards';
@@ -33,6 +34,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     PopoverPage,
+    EditModalPage,
     QuizPage,
     AddTaskPage,
     FormatdatePipe,
@@ -50,6 +52,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     PopoverPage,
+    EditModalPage,
     QuizPage,
     AddTaskPage,
     FlashCardsPage
