@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ taskItem.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+      <ion-label>Tags</ion-label>
+      <ion-select [(ngModel)]="taskItem.tags" multiple="true">
+        <ion-option>priority</ion-option>
+        <ion-option>revise</ion-option>
+        <ion-option>on hold</ion-option>
+        <ion-option>need help</ion-option>
+        <ion-option>questions</ion-option>
+        <ion-option>theory</ion-option>
+      </ion-select>
+    </ion-item>
+	<ion-item>
+		<ion-label>Title</ion-label>
+		<ion-input type="text" [(ngModel)]="taskItem.title" name="title"></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Description</ion-label>
+		<ion-textarea type="text" [(ngModel)]="taskItem.description" name="description"></ion-textarea>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Deadline</ion-label>
+        <ion-input type="text" [(ngModel)]="taskItem.deadline" name="deadline"></ion-input>
+    </ion-item><br>
+    <button ion-button (click)="updateTask(taskItem)" full>Update</button>
+</ion-content>

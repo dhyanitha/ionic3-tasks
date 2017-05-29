@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
@@ -18,7 +18,9 @@ export class AddTaskPage {
 	constructor(public navCtrl: NavController, 
 				public navParams: NavParams,
 				private formBuilder: FormBuilder,
-				public db: AngularFireDatabase) {
+				public db: AngularFireDatabase,
+				public toastCtrl: ToastController) {
+
 		this.tasks = db.list('/tasks');
 
 		this.taskItem = this.formBuilder.group({
@@ -39,8 +41,18 @@ export class AddTaskPage {
 			deadline: new Date(this.taskItem.value.deadline).toString(),
 			tags: this.tags
 		};
-		console.log(JSON.stringify(item));
+		// console.log(JSON.stringify(item));
 		this.tasks.push(item);
+		this.presentToast('Task added successfully');
+		this.navCtrl.pop();
+	}
+
+	presentToast(msg) {
+		let toast = this.toastCtrl.create({
+		  message: msg,
+		  duration: 3000
+		});
+		toast.present();
 	}
 
 }
